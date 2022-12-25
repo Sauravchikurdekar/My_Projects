@@ -1,0 +1,79 @@
+AOP: Aspect oriented programming
+
+
+Spring AOP:
+
+LoanService     loginAspect    => ProxyClass
+                Transaction       LoanService
+                
+                
+
+ LoanSeriveProxy extends LoanService{
+    List<MethodBeforeAdvice> list = new AL<>
+   issueLoan(){
+   		list.stream().forEach(l -> l.before());
+   		super.issueLoan();
+   		list1.stream().forEach(l->l.afterRetruning());
+   } 
+ 	
+ }
+ 
+
+ what method body
+ when
+ where
+ 
+ 
+ 
+ 
+ Advice:
+ @Before
+ @After
+ @AfterReturning
+ @AfterTHrowing
+ @Around
+ 
+ 
+ try{
+      @Before
+ 	//code
+ 	 @AfterReturning
+ }catch(){
+ 	 @AfterTHrowing
+ }
+ finally{
+   @After
+ 
+ }
+ 
+ public void payDue(String customerId) {
+		System.out.println("Entered: " + "LoanService : payDue at " + LocalDateTime.now());
+
+		System.out.println("Begin transaction");
+		try {
+			System.out.println("Pending due cleared: " + customerId);
+			System.out.println("Commit transaction");
+		} catch (Exception e) {
+			System.out.println("Rollback Transaction");
+		}
+		System.out.println("Exit: " + "LoanService : payDue at " + LocalDateTime.now());
+	}
+	
+	
+Advice: (what & when) the job of an aspect
+	@Before
+	@After
+	@AfteReturning
+	@AfterThrowing
+	@Around
+	
+	
+JoinPoint: (where) a point in execution of the application where and aspect can be plugged in
+
+Pointcut: one or more joinpoints at which advice should be woven
+
+Aspect:  is a merger of advice & pointcut
+
+proxy: the object created after applying advice to the target object
+
+weaving: the process of applying aspects to create a new proxied object
