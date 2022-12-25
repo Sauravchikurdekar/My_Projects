@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>color changing</title>
+</head>
+<style type="text/css">
+
+.btn{
+	padding: 100px 100px;
+	background: var(--color);
+	cursor: pointer; }
+	
+	.btn-1 {
+	--color: red;
+}
+
+.btn-2 {
+	--color: yellow;
+}
+	
+	.btn-3 { 
+	--color: orange;
+}
+
+.btn-4 {
+	--color: green;
+}
+.btnA {
+	padding: 80px 30px;
+	margin bottom: 2px;
+	background: var(--color);
+	cursor: pointer;
+}
+
+.btnC {
+	padding: 80px 20px;
+	margin bottom: 2px;
+	background: var(--color);
+	cursor: pointer;
+}
+
+.btnA { 
+	--color: white;
+}
+
+.btnC { 
+	--color: white;
+}
+
+
+
+</style>
+<body bgcolor="white" text="black" bgcolor="white" cellpadding="15"
+	cellpadding="15">
+	<div>
+		<button id="btn1" class="btn btn-1">1</button>
+		<button id="btn2" class="btn btn-2">2</button>
+	</div>
+	<div id="block"></div>
+
+
+	<button type="button" class="btnA" onclick="Anticlockwise()">Anticlockwise</button>
+	<button type="button" class="btnC " onclick="clockwise()">Clockwise</button>
+	<div>
+		<div>
+			<button id="btn4" class="btn btn-4">4</button>
+			<button id="btn3" class="btn btn-3">3</button>
+		</div>
+
+		<script>
+			var count = 0;
+			var currentStyle= [];
+			currentStyle[1] = document.getElementById("btn1").classList[0];
+			currentStyle[2] = document.getElementById("btn2").classList[0];
+			currentStyle[3] = document.getElementById("btn3").classList[0];
+			currentStyle[4] = document.getElementById("btn4").classList[0];
+			
+			function Anticlockwise() {
+			for (i = 1; i < 5; i++) {
+					var element = document.getElementById("btn" +i);
+					var temp = i + 1;
+					if (temp === 5) {
+						temp = 1;
+					}
+					//alert("current style "+i+"  "+currentStyle2);
+					//alert("add style "+i+"  "+currentStyle1);
+					var currentStyle2 = document.getElementById("btn"+i).classList[0];
+					element.classList.remove(currentStyle2);
+					element.classList.add(currentStyle[temp]);
+			}
+			}
+					</script>
+</body>
+</html>
