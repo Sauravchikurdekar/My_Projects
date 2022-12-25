@@ -1,0 +1,36 @@
+
+
+public class Employee {
+
+    private int eno;
+    private String enm;
+    private double sal;
+    private double hra,foodall,pt,tallow;
+    Employee()
+    {
+        eno=101;
+        enm="sonali";
+        sal=5000;
+    }
+    Employee(int id,String name,double sal)
+    {
+        eno=id;
+        enm=name;
+        this.sal=sal;
+        hra=    this.sal*.5;
+        foodall=2000;
+        pt=200;
+        tallow=1500;
+       
+    }
+    public String toString()
+    {
+        return "Details=" + eno + " " + enm + " "+ sal;
+    }
+    public double calculateSalary()
+    {
+    System.out.println("Method called from Employee ...");
+    return sal+hra+tallow+foodall-pt;
+    }
+
+}
