@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping  PUBLIC 
+"-//Hibernate/Hibernate mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+
+   
+ <hibernate-mapping>  
+  <class name="com.demo.Employee" table="Employee">  
+    <id name="empId" column="Id">  
+     <generator class="assigned"></generator>  
+    </id>              
+    <property name="empName" column="Name"></property>  
+    <property name="salary" column="salary"></property>  
+                
+  </class>  
+        
+ </hibernate-mapping> 
+ 
+ <!--  <hibernate-mapping> 
+  
+  <class name="com.has.Book" table="Book">
+  <id name="" column="">
+<genrator class="assigned"></genrator> 
+</id>
+<property name="" column=""></property>
+<property name="" column=""></property>
+</class>
+</hibernate-mapping> -->
