@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+				
+			<beans>
+			<bean id="a1" class="com.demo.Actors">
+			<property name="actId" value="101"></property>
+			<property name="actName" value="nora"></property>
+			<property name="salary" value="5000000"></property>
+			</bean>
+				
+				<bean id="a2" class="com.demo.Actors">
+			<property name="actId" value="102"></property>
+			<property name="actName" value="Hritik"></property>
+			<property name="salary" value="600000"></property>
+			</bean>
+			
+			<bean id="a3" class="com.demo.Actors">
+			<property name="actId" value="103"></property>
+			<property name="actName" value="ranveersingh"></property>
+			<property name="salary" value="5000000"></property>
+			</bean>
+			
+			<bean id="m" class="com.demo.Movie">
+			<property name="movieId" value="1004"></property>
+			<property name="movieName" value="HABIBI"></property>
+			<property name="budjet" value="5000000000"></property>
+			<property name="actList">
+			<list>
+			<ref bean="a1"></ref>
+			<ref bean="a2"></ref>
+			<ref bean="a3"></ref>
+			</list>
+			</property>
+			</bean>
+			</beans>
