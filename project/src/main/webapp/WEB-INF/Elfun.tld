@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib>
+ <tlib-version>1.0</tlib-version>
+ <jsp-version>2.0</jsp-version>
+ <function>
+ 	<name>UPPER</name>
+ 		<function-class>com.seed.PersonInfo</function-class>
+ 		<function-signature>java.lang.String toUpper(java.lang.String )</function-signature>
+ </function>
+  <function>
+ 	<name>LOWER</name>
+ 		<function-class>com.seed.PersonInfo</function-class>
+ 		<function-signature>java.lang.String toLower(java.lang.String )</function-signature>
+ </function>
+ <function>
+ 	<name>LENGTH</name>
+ 		<function-class>com.seed.PersonInfo</function-class>
+ 		<function-signature>java.lang.Integer getLength(java.lang.String )</function-signature>
+ </function>
+</taglib>
